@@ -1,25 +1,49 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/JY05cCmC)
 # Un acercamiento a CAKEPHP 5 con la aplicación de Chuck Jokes
 
-Usando como guía estos dos documentos:
+## Descripción del proyecto
+Aplicación web desarrollada con CakePHP 5 que obtiene chistes aleatorios de Chuck Norris desde la API pública y permite guardarlos en una base de datos SQLite.
 
-- https://github.com/maximofernandezriera/chuck-jokes/blob/main/GUIDE_JOKES.md
-- https://github.com/maximofernandezriera/chuck-jokes/blob/main/README.md
+## Funcionalidades implementadas
 
-Deberéis sumergiros en CakePHP en su versión 5 hasta tener funcionando la aplicación que podéis encontrar en:
+### ✅ Funcionalidades básicas
+- Obtención de chistes aleatorios desde la API de Chuck Norris
+- Guardado de chistes en base de datos SQLite
+- Prevención de duplicados usando api_id
 
-- https://github.com/maximofernandezriera/chuck-jokes
+### ✅ Funcionalidades avanzadas
+- Listado de chistes guardados (visible en `/jokes/random`)
+- Eliminación de chistes individuales
+- Interfaz mejorada con navegación
+- Mensajes de éxito/error
 
-Como hemos visto en clase y para que todos podamos hablar el mismo idioma, los que utilizáis como sistema operativo Windows debéis instalar WSL en este enlace: 
+### ✅ Infraestructura
+- Dockerización completa con docker-compose
+- Configuración de Apache con mod_rewrite
+- Base de datos SQLite persistente
+- Tests básicos con PHPUnit
 
-- https://learn.microsoft.com/es-es/windows/wsl/install
+## Instalación y ejecución
 
-# Formato de entrega:
+### Con Docker (Recomendado)
 
-  - El proyecto documentado en este mismo repositorio. Para la generación de la documentación está permitida el uso (pero no el abuso) de algunas IAs siempre y cuando reviséis lo que entregáis.
-  - El código fuente del proyecto.
-  - Algunas imágenes del funcionamiento de vuestro proyecto en local
- 
- # Fecha de entrega
+```bash
+# Clonar el repositorio
+git clone https://github.com/cifpfbmoll/chuck-jokes-como-acercamiento-a-cakephp-5-Carlos-Lopez-Calvo.git
 
-  - El próximo jueves día 8 a las 12:00 h.
+# Entrar al directorio
+cd chuck-jokes-como-acercamiento-a-cakephp-5-Carlos-Lopez-Calvo/chuck-jokes
+
+# Construir y ejecutar
+docker-compose build
+docker-compose up -d
+
+# Acceder a la aplicación
+open http://localhost:5504/jokes/random
+```
+
+## Uso de la aplicación
+
+1. **Obtener chiste aleatorio**: La página principal muestra un chiste aleatorio de Chuck Norris
+2. **Guardar chiste**: Haz clic en "Guardar en la base de datos"
+3. **Ver chistes guardados**: La lista aparece automáticamente debajo del chiste actual
+4. **Eliminar chiste**: Usa el botón "Eliminar" en cada chiste guardado
