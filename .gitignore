@@ -1,0 +1,49 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# IDE / editor
+.idea/
+.vscode/
+
+# Composer / PHP tools
+/vendor/
+composer.phar
+.phpunit.result.cache
+.phpcs-cache
+.php-cs-fixer.cache
+.php_cs.cache
+.psalm.cache
+.phpstan/cache
+.phpstorm.meta.php
+
+# CakePHP runtime
+/tmp/*
+!/tmp/.gitkeep
+/logs/*
+!/logs/.gitkeep
+/webroot/cache/*
+!/webroot/cache/.gitkeep
+
+# Environment & secrets
+.env
+.env.*
+/config/.env
+/config/app_local.php
+/config/app_local.php.*
+/config/jwt.key
+/config/jwt.pem
+/config/*.local.php
+
+# Coverage / reports / build artifacts
+coverage/
+tests/cov/
+build/
+reports/
+
+# Node (por si acaso)
+node_modules/
+npm-debug.log*
+yarn-error.log*
